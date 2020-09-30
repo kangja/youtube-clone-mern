@@ -23,7 +23,9 @@ function App() {
           <Route exact path="/register" component={Auth(RegisterPage, false)} />
 
           {/* it means the route is localhost:3000/video/upload */}
-          <Route exact path="/video/upload" component={Auth(RegisterPage, false)} />
+
+          {/* because it's true, it means that only those who are authenticated/logged in can go to the upload video page. */}
+          <Route exact path="/video/upload" component={Auth(UploadVideoPage, true)} />
 
         </Switch>
       </div>
